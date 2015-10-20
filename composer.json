@@ -31,8 +31,8 @@
     },
     "autoload": {
         "psr-0": {
-            "Altitude\\LaravelUploadcare": "src/"
+            "Softpampa\\LaravelUploadcare": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev-master"
 }
