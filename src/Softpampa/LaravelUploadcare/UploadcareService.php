@@ -21,7 +21,10 @@ class UploadcareService extends Api
      */
     public function scriptTag($version = null, $async = false)
     {
-        return $this->widget->getScriptTag($version, $async);
+            $result = <<<EOT
+<script>UPLOADCARE_LOCALE = 'pt';</script>
+EOT;
+        return $result.$this->widget->getScriptTag($version, $async);
     }
 
     /**
