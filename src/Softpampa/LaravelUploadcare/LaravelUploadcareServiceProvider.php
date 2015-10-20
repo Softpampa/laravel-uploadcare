@@ -1,4 +1,4 @@
-<?php namespace Altitude\LaravelUploadcare;
+<?php namespace Softpampa\LaravelUploadcare;
 
 use Illuminate\Support\ServiceProvider;
 use \Config;
@@ -20,12 +20,12 @@ class LaravelUploadcareServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->app['form']->macro('uploadcare', function($name, $value=null, $options=array()){
-			
+
 			$options = array_merge($options, array(
 				'role'  => 'uploadcare-uploader',
 				'value' => $value,
 			));
-			
+
 			return $this->app['form']->input('hidden', $name, $value, $options);
 		});
 	}
@@ -38,10 +38,10 @@ class LaravelUploadcareServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		$this->app->singleton('uploadcare', function(){
-			
+
 			$public  = Config::get('uploadcare.public_key');
 			$private = Config::get('uploadcare.private_key');
-			
+
 			return new UploadcareService($public, $private);
 		});
 	}

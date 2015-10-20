@@ -1,4 +1,4 @@
-<?php namespace Altitude\LaravelUploadcare\Facades;
+<?php namespace Softpampa\LaravelUploadcare\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

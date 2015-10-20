@@ -8,7 +8,7 @@ First, add this to your `composer.json` file
 
 ```js
 "require": {
-    "altitude/laravel-uploadcare": "~1.2"
+    "softpampa/laravel-uploadcare": "~1.2"
 }
 ```
 
@@ -29,13 +29,13 @@ Finally, add the service provider and alias in your `app/config/app.php`
 'providers' => array(
     ...
 
-    'Altitude\LaravelUploadcare\LaravelUploadcareServiceProvider',
+    'Softpampa\LaravelUploadcare\LaravelUploadcareServiceProvider',
 );
 
 'aliases' => array(
     ...
 
-    'Uploadcare'        => 'Altitude\LaravelUploadcare\Facades\Uploadcare',
+    'Uploadcare'        => 'Softpampa\LaravelUploadcare\Facades\Uploadcare',
 );
 ```
 

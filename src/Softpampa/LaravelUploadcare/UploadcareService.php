@@ -1,4 +1,4 @@
-<?php namespace Altitude\LaravelUploadcare;
+<?php namespace Softpampa\LaravelUploadcare;
 
 use \Uploadcare\Api as Api;
 
@@ -7,7 +7,7 @@ class UploadcareService extends Api {
 	public function __construct($public, $private){
 		parent::__construct($public, $private);
 	}
-	
+
 	/**
 	* Returns <script> sections to include Uploadcare widget
 	*
