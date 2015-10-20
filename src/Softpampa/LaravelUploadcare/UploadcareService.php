@@ -1,22 +1,41 @@
-<?php namespace Softpampa\LaravelUploadcare;
+<?php
 
-use \Uploadcare\Api as Api;
+namespace Softpampa\LaravelUploadcare;
 
-class UploadcareService extends Api {
+use Uploadcare\Api as Api;
 
-	public function __construct($public, $private){
-		parent::__construct($public, $private);
-	}
+class UploadcareService extends Api
+{
+    public function __construct($public, $private)
+    {
+        parent::__construct($public, $private);
+    }
 
-	/**
-	* Returns <script> sections to include Uploadcare widget
-	*
-	* @param string $version Uploadcare version
-	* @param boolean $async
-	* @return string
-	*/
-	public function scriptTag($version = null, $async = false){
-		return $this->widget->getScriptTag($version, $async);
-	}
+    /**
+     * Returns <script> sections to include Uploadcare widget.
+     *
+     * @param string $version Uploadcare version
+     * @param bool   $async
+     *
+     * @return string
+     */
+    public function scriptTag($version = null, $async = false)
+    {
+        return $this->widget->getScriptTag($version, $async);
+    }
 
+    /**
+     * Returns UUID from uploaded file.
+     *
+     * @param string $path Path from file
+     *
+     * @return string
+     */
+    public function uploadFromPath($path)
+    {
+        $file = $this->uploader->fromPath($path);
+        $file->store();
+
+        return $file->getUuid();
+    }
 }

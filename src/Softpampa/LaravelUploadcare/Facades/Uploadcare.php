@@ -1,11 +1,13 @@
-<?php namespace Softpampa\LaravelUploadcare\Facades;
+<?php
+
+namespace Softpampa\LaravelUploadcare\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Uploadcare extends Facade {
-
-	protected static function getFacadeAccessor(){
-		return 'uploadcare';
-	}
-
+class Uploadcare extends Facade
+{
+    protected static function getFacadeAccessor()
+    {
+        return 'uploadcare';
+    }
 }
