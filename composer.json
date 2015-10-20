@@ -1,8 +1,8 @@
 {
-    "name": "altitude/laravel-uploadcare",
+    "name": "softpampa/laravel-uploadcare",
     "description": "Laravel Service for Uploadcare",
     "keywords": ["laravel", "uploadcare"],
-    "homepage":"http://github.com/altitude/laravel-uploadcare",
+    "homepage":"http://github.com/altitude/softpampa-uploadcare",
     "license": "MIT",
     "authors": [
         {
@@ -10,6 +10,12 @@
             "email": "clem@32b6.com",
             "homepage": "http://32b6.com",
             "role": "Developer"
+        },
+        {
+            "name": "Madson Verdi Junior",
+            "email": "madson.verdi@softpampa.com",
+            "homepage": "http://www.softpampa.com.br",
+            "role": "Senior Developer"
         }
     ],
     "repositories": [
